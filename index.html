@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Choclate Survey by Ian Rockefeller</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header clearfix">
+      	<nav>
+        	<ul class="nav nav-pills pull-right">
+            	<li role="presentation" class="active"><a href="#">Home</a></li>
+            	<li role="presentation"><a href="#">About</a></li>
+            	<li role="presentation"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+		<h3 class="text-muted">The Choclate Survey By Ian Rockefeller</h3>
+	</div>
+	<div class="jumbotron">
+	<!-- INTRO VIEW -->
+		<div id="introSlide">
+			<h1 style="text-align: center;">Welcome to the Choclate Survey</h1>
+			<p>The survey will consist of 4 questions.</p>
+			<p>For each survey question:</p>
+			<ul>
+				<li>You will be presented with descriptions and prices of 2 chocolates. In addition to the 2 chocolates, you will also have the option of “no purchase”.</li>
+				<li>After viewing the information, you must complete two tasks:</li>
+				<ol>
+					<li>Pick the best option from among all 3 available options (Chocolate A, Chocolate B, or No Purchase)</li>
+					<li>Pick the second best option from the remaining 2 options</li>
+				</ol>
+			</ul>
+			<p style="text-align: center;">Press the "Continue" button to begin.</p>
+			<p style="text-align: center; margin-bottom: 0;"><a class="btn btn-lg btn-success" href="#" role="button" id="begin">Continue</a></p>				
+		</div>
+	<!-- SURVEY VIEW -->
+		<div id="surveySlide">
+			<h1 id="slideHeader"></h1>
+			<p>Please indicate which option you believe is the best from the three options presented below: two different chocolates and no purchase.</p>
+			<p>After you have selected the best option, please indicate which option is the second best.</p>			
+			<table class="table">
+				<thead>
+				  <tr>
+				    <th></th>
+				    <th>Chocolate A</th>
+				    <th>Chocolate B</th>				    
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+				    <th scope="row">Color</th>
+				    <td id="colorA"></td>
+				    <td id="colorB"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">Taste</th>
+				    <td id="tasteA"></td>
+				    <td id="tasteB"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">Nuts</th>
+				    <td id="nutsA"></td>
+				    <td id="nutsB"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">Price</th>
+				    <td id="priceA"></td>
+				    <td id="priceB"></td>
+				  </tr>				  
+				</tbody>
+			</table>			
+			<p style="text-align: center;">
+				<a class="btn btn-lg btn-primary actionButton" href="#" role="button" id="choice1">Chocolate A</a>
+				<a class="btn btn-lg btn-primary actionButton" href="#" role="button" id="choice2">Chocolate B</a>
+				<a class="btn btn-lg btn-primary actionButton" href="#" role="button" id="nopurchase">No Purchase</a>
+			</p>
+		</div>
+		<div id="resultsSlide">
+			<h1>Results:</h1>
+			<table class="table table-striped">
+				<thead>
+				  <tr>
+				    <th>Question</th>
+				    <th>First Choice</th>
+				    <th>Second Choice</th>				    
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+				    <th scope="row">1</th>
+				    <td id="fchoice1"></td>
+				    <td id="schoice1"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">2</th>
+				    <td id="fchoice2"></td>
+				    <td id="schoice2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">3</th>
+				    <td id="fchoice3"></td>
+				    <td id="schoice3"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">4</th>
+				    <td id="fchoice4"></td>
+				    <td id="schoice4"></td>
+				  </tr>				  
+				</tbody>
+			</table>			
+		</div>
+	</div>
+	<footer class="footer">
+	<p>&copy; Ian Rockefeller 2015</p>
+	</footer>
+    </div>
+
+	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://raw.github.com/andris9/jStorage/master/jstorage.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+	<script src="js.js"></script>
+</body>
+</html>
